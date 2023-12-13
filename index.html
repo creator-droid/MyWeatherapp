@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="weather-app">
       <header>
-        <form class="search-city">
+        <form class="search-city" id="search-city">
           <div class="centerForm">
             <input
               type="search"
               placeholder="Enter a city.."
               required
+              id="enterCity"
               class="enterCity"
             />
             <input type="submit" value="Search" class="button" />
@@ -23,18 +25,23 @@
       </header>
       <main>
         <div class="mainClass">
-          <div class="Temperature">12°C</div>
-          <div class="Today">Tuesday 14:49</div>
-          <div class="descrip">scattered clouds</div>
+          <div class="Temperature"></div>
+          <div class="city" id="city"></div>
+          <div class="Today"></div>
+          <div class="descrip">
+          </div>
           <div class="list-items">
-            <div class="humidity">Humidity: 66%</div>
-
-            <div class="wind">Wind: 3.13km/h</div>
+            <div class="humidity">
+              <strong>Humidity</strong> <br />
+              <span class="humid"></span> 
+            </div>
+            <div class="wind">
+              <strong>Wind</strong> <br />
+              <span class="win"></span> 
           </div>
         </div>
       </main>
-
-      <footer>
+      <footer class="myInfo">
         This project was coded by
         <a href="https://github.com/creator-droid" target="_blank">
           Siphosihle Mtshali</a
@@ -44,5 +51,6 @@
         <a href="" target="_blank">hosted on Netlify</a>
       </footer>
     </div>
+    <script src="src/app.js"></script>
   </body>
 </html>

@@ -40,6 +40,12 @@ body {
   display: flex;
   justify-content: center;
   padding: 10px;
+  margin-left: 45px;
+}
+.city {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
 }
 .Today {
   display: flex;
@@ -62,4 +68,10 @@ body {
 }
 .humidity {
   margin-left: 150px;
+}
+.myInfo {
+  font-size: 12px;
+}
+.icon {
+  font-size: 22px;
 }
