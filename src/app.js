@@ -41,7 +41,10 @@ function formatDate(date) {
 function searchCity(city) {
   let apiKey = "39017470c087cfb637tbfb8fo35a36b8";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
-  axios.get(apiUrl).then(refreshWeather);
+  axios.get(apiUrl).then(function (response) {
+    refreshWeather(response);
+    getForecast(city);
+  });
 }
 
 function handleSearchSubmit(event) {
@@ -50,17 +53,17 @@ function handleSearchSubmit(event) {
 
   searchCity(searchInput.value);
 }
+
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
   return days[date.getDay()];
 }
-
 function getForecast(city) {
   let apiKey = "39017470c087cfb637tbfb8fo35a36b8";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
-  axios(apiUrl).then(displayForecast);
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function displayForecast(response) {
@@ -94,6 +97,4 @@ function displayForecast(response) {
 
 let searchFormElement = document.querySelector("#search-city");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
-
-searchCity("Cape Town");
-getForecast("Cape Town");
+searchCity("Paris");
