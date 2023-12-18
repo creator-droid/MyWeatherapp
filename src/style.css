@@ -1,14 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;1,100;1,200;1,300;1,500;1,700&display=swap");
 
 body {
-  background-image: url("https://www.thoughtco.com/thmb/dRU8V148YCaUihYuCMz4QNQ1dqw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/clouds-5b6b4e50c9e77c0050491212.jpg");
+  background-image: url("https://www.pacificflying.com/wp-content/uploads/Magda-Ehlers-clouds.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   font-family: "Poppins", sans-serif;
+  color: rgba(39, 33, 66, 0.7);
 }
 .weather-app {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.2);
   max-width: 600px;
   margin: 45px auto;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
@@ -16,7 +17,7 @@ body {
   padding: 30px;
 }
 .forecast-section {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.2);
   max-width: 600px;
   margin: 45px auto;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
@@ -32,7 +33,7 @@ body {
   padding: 7px 10px;
 }
 .button {
-  background: #89aadf;
+  background: #5d7bab;
   padding: 7px 10px;
   border: none;
   font-size: 16px;
@@ -46,7 +47,7 @@ body {
   align-items: center;
 }
 .Temperature {
-  font-weight: 400px;
+  font-weight: 200;
   font-size: 76px;
   display: flex;
   justify-content: center;
@@ -123,7 +124,7 @@ body {
 }
 .weather-forecast-temperatures {
   text-align: center;
-  color: #f65282;
+  color: rgba(39, 33, 66, 0.4);
   margin-top: 10px;
   display: flex;
   justify-content: center;
